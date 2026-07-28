@@ -248,7 +248,7 @@
     background: var(--card); border: 1px solid var(--line); border-radius: var(--radius);
     overflow: hidden; transition: all 0.35s ease; transform-style: preserve-3d; perspective: 1000px;
   }
-  a.project-card:hover { border-color: var(--mint-dim); transform: translateY(-6px); box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4), 0 0 30px var(--mint-glow); }
+  a.project-card:hover { border-color: var(--card-accent, var(--mint-dim)); transform: translateY(-6px); box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4), 0 0 30px var(--card-glow, var(--mint-glow)); }
   .visit-link {
     font-size: 14px; color: var(--mint-dim); opacity: 0; transition: opacity 0.3s ease;
     display: inline-block; margin-left: 4px;
@@ -461,7 +461,7 @@
       <div class="about-body">
         <p>4+ tahun pengalaman hands-on di Quality Assurance dan Full Stack Development, diperkuat dengan background analitis dan data-driven marketing. Sebagai QA Lead di Telkomsel, memimpin testing end-to-end untuk migrasi sistem skala nasional mencakup 10.5M+ pengguna dan platform billing 159M pengguna.</p>
         <p>Sebagai founder & developer, saya membangun dan mendeploy 3 aplikasi full-stack (React, Next.js, Supabase, PostgreSQL) dari nol ke production — sekaligus mengelola kampanye Meta Ads, tracking Pixel/CAPI, dan optimasi performa-nya sendiri.</p>
-        <p>Dikenal dengan structured problem-solving, dokumentasi teknis yang jelas, dan eksekusi yang bisa diandalkan di environment lintas tim skala nasional. Sekarang diperkuat dengan AI assisted development untuk shipping 10x lebih cepat.</p>
+        <p>Dikenal dengan structured problem-solving, dokumentasi teknis yang jelas, dan eksekusi yang bisa diandalkan di environment lintas tim skala nasional. Sekarang diperkuat dengan AI-assisted development untuk shipping 10x lebih cepat.</p>
       </div>
       <div class="stat-row">
         <div class="stat"><b><span class="counter" data-target="4">0</span>+</b><span>tahun pengalaman</span></div>
@@ -558,6 +558,51 @@
           <p>Debt management SaaS dengan integrated payment/checkout flow, automated reminders, dan reporting dashboard. Full setup Meta Pixel &amp; CAPI untuk product analytics.</p>
           <div class="project-meta">
             <span class="mchip">React</span><span class="mchip">Node.js</span><span class="mchip">Supabase</span><span class="mchip">CAPI</span>
+          </div>
+        </div>
+      </a>
+      <!-- COMPANY PROFILE 1 -->
+      <a class="project-card" data-tilt href="#" target="_blank" rel="noopener" style="--card-accent:var(--mint);--card-glow:var(--mint-glow);">
+        <div class="project-browser">
+          <span class="bdot"></span><span class="bdot"></span><span class="bdot"></span>
+          <span class="project-url">company-a</span>
+        </div>
+        <div class="project-body">
+          <div class="p-icon">&#127970;</div>
+          <h3>[Perusahaan A] <span class="visit-link">&#8599;</span></h3>
+          <p>[Company profile classic — deskripsi bisnis, layanan unggulan, dan nilai perusahaan.]</p>
+          <div class="project-meta">
+            <span class="mchip">[tech]</span><span class="mchip">[tech]</span><span class="mchip">[tech]</span>
+          </div>
+        </div>
+      </a>
+      <!-- COMPANY PROFILE 2 -->
+      <a class="project-card" data-tilt href="#" target="_blank" rel="noopener" style="--card-accent:var(--purple);--card-glow:var(--purple-glow);">
+        <div class="project-browser">
+          <span class="bdot"></span><span class="bdot"></span><span class="bdot"></span>
+          <span class="project-url">company-b</span>
+        </div>
+        <div class="project-body">
+          <div class="p-icon">&#128640;</div>
+          <h3>[Perusahaan B] <span class="visit-link">&#8599;</span></h3>
+          <p>[Company profile modern — fokus pada inovasi, teknologi, dan solusi digital.]</p>
+          <div class="project-meta">
+            <span class="mchip">[tech]</span><span class="mchip">[tech]</span><span class="mchip">[tech]</span>
+          </div>
+        </div>
+      </a>
+      <!-- COMPANY PROFILE 3 -->
+      <a class="project-card" data-tilt href="#" target="_blank" rel="noopener" style="--card-accent:var(--pink);--card-glow:rgba(244,114,182,0.15);">
+        <div class="project-browser">
+          <span class="bdot"></span><span class="bdot"></span><span class="bdot"></span>
+          <span class="project-url">company-c</span>
+        </div>
+        <div class="project-body">
+          <div class="p-icon">&#127912;</div>
+          <h3>[Perusahaan C] <span class="visit-link">&#8599;</span></h3>
+          <p>[Company profile creative — branding, visual identity, dan strategi komunikasi.]</p>
+          <div class="project-meta">
+            <span class="mchip">[tech]</span><span class="mchip">[tech]</span><span class="mchip">[tech]</span>
           </div>
         </div>
       </a>
@@ -881,7 +926,7 @@
   animateGlow();
 
   /* ===== TYPING ===== */
-  const roles = ["Performance Marketer", "Full-Stack Developer", "QA Lead @ Telkomsel", "AI Assisted Builder", "Growth Engineer"];
+  const roles = ["Performance Marketer", "Full-Stack Developer", "QA Lead @ Telkomsel", "AI-Assisted Builder", "Growth Engineer"];
   let ri = 0, ci = 0, deleting = false;
   const typedEl = document.getElementById('typed');
   function typeLoop() {
